@@ -1,0 +1,87 @@
+/* ============================================================
+   AICOE Design System — Design Tokens (v1.0)
+   Source of truth extracted from ShiftAI Marketing Studio.
+
+   One theme (light), zinc neutrals, muted steel-blue brand,
+   emerald accent, amber for human/pending states.
+
+   Rules:
+   - Panels/cards: 12px radius. Controls/tiles: 8px. Chips/avatars: pill or circle.
+   - Type floor: nothing below 11px. Base body: 13px.
+   - Borders over shadows. Shadows only for floating surfaces
+     (popovers, menus, drawers, toasts).
+   ============================================================ */
+
+:root {
+  /* ---- Neutrals ---- */
+  --bg: #ffffff;            /* page background */
+  --surface: #fafafa;       /* recessed surfaces, hovers, doc previews */
+  --ink: #1b1b20;           /* headings, strong text */
+  --text: #3f4046;          /* body text */
+  --muted: #66666e;         /* secondary text, labels */
+  --faint: #f1f1f4;         /* subtle fills: icon hovers, neutral chips */
+  --line: #e5e5ea;          /* default 1px border */
+  --line-soft: #efeff2;     /* hairline dividers inside cards */
+
+  /* ---- Brand (muted steel blue) — primary actions, active nav,
+          agent/in-progress semantics ---- */
+  --brand: #456bb6;
+  --brand-ink: #34518d;     /* hover / text-on-soft */
+  --brand-soft: #e9eff9;    /* soft fills: active nav, blue chips */
+  --brand-line: #c8d6ef;    /* borders on brand-soft surfaces */
+
+  /* ---- Accent (emerald) — success, approved, done, positive deltas ---- */
+  --accent: #047857;
+  --accent-ink: #065f46;
+  --accent-soft: #e4f3ec;
+
+  /* ---- Amber — human gates, waiting, pending review ---- */
+  --amber-ink: #8a4a06;
+  --amber-soft: #fbf0df;
+  --amber-line: #ecd9b8;
+  --amber-live: #d97706;    /* live/running pulse dots and bars */
+
+  /* ---- Red — blocked, overdue, destructive. Use sparingly ---- */
+  --red: #b42318;
+  --red-soft: #fbeae8;
+
+  /* ---- Charts (categorical, in order) ---- */
+  --chart-1: #456bb6;
+  --chart-2: #047857;
+  --chart-3: #b45309;
+  --chart-4: #db2777;
+
+  /* ---- Radius ---- */
+  --r-panel: 12px;          /* cards, panels, list containers */
+  --r-control: 8px;         /* buttons, inputs, nav items, small tiles */
+  --r-pill: 99px;           /* chips, badges, counters */
+
+  /* ---- Layout ---- */
+  --sidebar: 224px;         /* collapsed: 68px */
+  --topbar-h: 54px;
+  --content-max: 1200px;
+
+  /* ---- Type ---- */
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --fs-body: 13px;          /* base */
+  --fs-h1: 21px;            /* page title, weight 650, ls -0.4px */
+  --fs-h2: 15px;            /* section/card title, weight 600 */
+  --fs-h3: 13px;            /* row/item title, weight 600 */
+  --fs-small: 12.5px;       /* controls, secondary body */
+  --fs-caption: 11.5px;     /* metadata */
+  --fs-micro: 11px;         /* absolute floor: labels, chips, kbd */
+  --fs-kpi: 19px;           /* KPI numbers, weight 650, ls -0.3px */
+
+  /* ---- Elevation (floating surfaces only) ---- */
+  --shadow-pop: 0 12px 32px rgba(23, 23, 28, 0.10);   /* popovers, menus */
+  --shadow-panel: 0 16px 44px rgba(23, 23, 28, 0.14); /* large panels */
+  --shadow-card-hover: 0 6px 20px rgba(27, 27, 32, 0.06);
+  --shadow-toast: 0 10px 30px rgba(20, 22, 30, 0.25);
+
+  /* ---- Motion ---- */
+  --ease: ease;
+  --t-fast: 0.13s;          /* icon hovers */
+  --t-base: 0.15s;          /* row/button hovers */
+  --t-layout: 0.18s;        /* sidebar collapse, layout shifts */
+}

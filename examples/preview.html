@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AICOE Design System — Preview</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="../styles/base.css">
+<link rel="stylesheet" href="../styles/layout.css">
+<link rel="stylesheet" href="../styles/components.css">
+<style>
+  .demo-section { margin-bottom: 34px; }
+  .demo-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+  .demo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 12px; }
+  @media (max-width: 900px) { .demo-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main class="screen-content">
+
+  <div class="page-header">
+    <div>
+      <p class="meta-label">AICOE Design System · v1.0</p>
+      <h1>Component preview</h1>
+      <p class="lede">Everything on this page is rendered by tokens.css + base.css + components.css, unmodified.</p>
+    </div>
+    <div class="header-actions">
+      <button class="secondary-button">View docs</button>
+      <button class="primary-button">+ Primary action</button>
+    </div>
+  </div>
+
+  <section class="kpi-band">
+    <article><p>Agent-executed</p><strong>79%</strong><small>34 of 43 activities</small></article>
+    <article><p>First-pass approval</p><strong>100%</strong><small class="positive">2 of 2 runs, no blocking findings</small></article>
+    <article><p>Cycle time saved</p><strong>18.7h</strong><small>vs pilot manual baseline</small></article>
+    <article><p>AI cost / campaign</p><strong>$4.27</strong><small>Across 3 campaigns</small></article>
+  </section>
+
+  <div class="demo-section">
+    <div class="section-heading"><div><h2>Buttons</h2><p>One primary per region; red is text-only.</p></div></div>
+    <div class="demo-row">
+      <button class="primary-button">Send answers</button>
+      <button class="secondary-button">View agent workflow</button>
+      <button class="outline-button">Export</button>
+      <button class="text-link">View all →</button>
+      <button class="text-button">Reject request</button>
+      <button class="icon-button" aria-label="More">⋯</button>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <div class="section-heading"><div><h2>Status chips</h2><p>blue = agent/in-progress · amber = human/waiting · green = done · red = blocked</p></div></div>
+    <div class="demo-row">
+      <span class="chip">Planned</span>
+      <span class="chip blue">In production</span>
+      <span class="chip amber">Awaiting sign-off</span>
+      <span class="chip green">Approved &amp; locked</span>
+      <span class="chip red">Blocked</span>
+      <span class="source-chip">OneDrive locked</span>
+      <span class="hash-label">8a89…0c80</span>
+      <span class="status-pill active"><span class="pulse-dot"></span> Running</span>
+      <span class="status-pill done">Done</span>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <div class="section-heading"><div><h2>Identity &amp; progress</h2><p>Humans are circles; agents are rounded squares.</p></div></div>
+    <div class="demo-row">
+      <span class="avatar">RP</span>
+      <span class="avatar sm">SR</span>
+      <span class="monogram sm">CI</span>
+      <span class="monogram">CB</span>
+      <span class="monogram lg">CR</span>
+      <div class="avatar-stack"><span class="avatar">RP</span><span class="avatar">SR</span><span class="avatar">MW</span><span>+2 reviewers</span></div>
+      <div class="progress-steps" aria-label="5 of 9 steps complete" style="width:220px">
+        <span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span class="current"></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <div class="section-heading"><div><h2>Cards</h2></div><button class="text-link">Governance settings →</button></div>
+    <div class="demo-grid">
+      <article class="card hoverable">
+        <div class="panel-heading"><span class="monogram">CI</span><span class="chip blue">AI agent</span></div>
+        <h2 style="margin:14px 0 6px">Campaign Identification</h2>
+        <p style="color:var(--muted);font-size:12.5px">Turns requests into complete, approved campaign briefs.</p>
+        <div class="inner-box" style="margin-top:12px">
+          <small>Autonomy boundary</small>
+          <p>May validate, classify, flag and draft briefs. May not approve briefs or alter the quarterly plan.</p>
+        </div>
+        <div class="card-footer">
+          <button class="text-link">View 11 runs →</button>
+          <span class="status-pill done">100% autonomy</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Advisory strip</h3>
+        <div class="advisory" style="margin-top:12px">
+          <span class="advisory-icon">!</span>
+          <div><strong>Turnaround watch</strong><p>Reviewers disagree on the opening angle. Decision overdue since 19 Aug.</p></div>
+        </div>
+        <div style="margin-top:12px" class="empty-panel embedded">
+          <p>Not drafted yet. The document appears here the moment the fan-out runs.</p>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Form fields</h3>
+        <div style="display:grid;gap:12px;margin-top:12px">
+          <label class="field"><small>Which target segment is this campaign for?</small>
+            <select><option>Select…</option><option>Mid-market IT leaders</option></select></label>
+          <label class="field gap"><small>Is budget approved for external production?</small>
+            <select><option>Select…</option></select></label>
+          <label class="field"><small>Notes</small><textarea placeholder="Optional context for the agent…"></textarea></label>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <div class="section-heading"><div><h2>List rows</h2><p>Bordered container, grid rows, hover surface.</p></div><button class="text-link">View all →</button></div>
+    <div class="list-panel">
+      <button class="list-row clickable" style="grid-template-columns:36px 1fr 150px 110px 20px">
+        <span class="monogram">AI</span>
+        <div><h3 style="margin:0">AI Readiness for Manufacturing</h3>
+          <p style="margin:4px 0 0;color:var(--muted);font-size:12px">Manufacturing · Executive campaign</p></div>
+        <span class="chip amber">Awaiting sign-off</span>
+        <span style="color:var(--muted);font-size:11.5px">19 Aug, 12:26</span>
+        <span class="row-arrow">›</span>
+      </button>
+      <button class="list-row clickable" style="grid-template-columns:36px 1fr 150px 110px 20px">
+        <span class="monogram">BC</span>
+        <div><h3 style="margin:0">BC Cloud Momentum</h3>
+          <p style="margin:4px 0 0;color:var(--muted);font-size:12px">Financial Services · Demand generation</p></div>
+        <span class="chip blue">In review</span>
+        <span style="color:var(--muted);font-size:11.5px">20 Aug, 14:18</span>
+        <span class="row-arrow">›</span>
+      </button>
+      <button class="list-row clickable" style="grid-template-columns:36px 1fr 150px 110px 20px">
+        <span class="monogram">W1</span>
+        <div><h3 style="margin:0">BC Wave 1 Enablement</h3>
+          <p style="margin:4px 0 0;color:var(--muted);font-size:12px">Complete, governed campaign package</p></div>
+        <span class="chip green">Approved &amp; locked</span>
+        <span style="color:var(--muted);font-size:11.5px">26 Aug, 01:52</span>
+        <span class="row-arrow">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <div class="section-heading"><div><h2>Tabs, menu &amp; toast</h2></div></div>
+    <div class="tab-bar">
+      <button class="active">Journey</button><button>Brief</button><button>Content</button><button>Compliance</button>
+    </div>
+    <div class="demo-row">
+      <details class="menu">
+        <summary class="outline-button" style="display:inline-flex">Menu ▾</summary>
+        <div class="menu-list" style="left:0;right:auto">
+          <p class="menu-label">Actions</p>
+          <button>Rename campaign</button>
+          <button>Duplicate</button>
+          <div class="menu-sep"></div>
+          <button style="color:var(--red)">Archive</button>
+        </div>
+      </details>
+      <button class="pill-pick active"><span class="pill-pick-dot"></span> BC Cloud Momentum</button>
+      <button class="pill-pick"><span class="pill-pick-dot" style="--tone:#047857"></span> LEVELSHIFT</button>
+    </div>
+    <div class="toast" style="position:static;transform:none;display:inline-block;margin-top:16px">Answers sent back to the agent</div>
+  </div>
+
+</main>
+</body>
+</html>
